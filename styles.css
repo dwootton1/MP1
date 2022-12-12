@@ -1,0 +1,127 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: darkblue;
+  color: black;
+}
+
+
+.tile {
+  color: currentColor;
+  font-size: 2.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: 90px 90px 90px;
+  grid-template-rows: 90px 90px 90px;
+  cursor: default;
+  position: relative;
+}
+
+.right-border {
+  border-right: 0.2em solid orange;
+}
+
+.bottom-border {
+  border-bottom: 0.2em solid orange;
+}
+
+.strike {
+  position: absolute;
+  background-color: darkred;
+}
+
+.strike-row-1 {
+  width: 100%;
+  height: 6px;
+  top: 15%;
+}
+.strike-row-2 {
+  width: 100%;
+  height: 6px;
+  top: 48%;
+}
+.strike-row-3 {
+  width: 100%;
+  height: 6px;
+  top: 83%;
+}
+.strike-column-1 {
+  height: 100%;
+  width: 6px;
+  left: 15%;
+}
+.strike-column-2 {
+  height: 100%;
+  width: 6px;
+  left: 48%;
+}
+.strike-column-3 {
+  height: 100%;
+  width: 6px;
+  left: 83%;
+}
+.strike-diagonal-1 {
+  width: 90%;
+  height: 4px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(45deg);
+}
+.strike-diagonal-2 {
+  width: 90%;
+  height: 4px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(-45deg);
+}
+
+h1 {
+  color: currentColor;
+}
+
+
+h2 {
+  color: currentColor;
+  font-size: 2em;
+  margin-top: 0px;
+}
+
+button {
+  background-color: transparent;
+  color: currentColor;
+  border: currentColor 1px solid;
+  padding: 10px;
+  font-size: 1.7em;
+}
+
+.x-hover:hover::after {
+  content: "X";
+  opacity: 0.5;
+}
+
+.o-hover:hover::after {
+  content: "O";
+  opacity: 0.5;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+#game-over-area {
+  text-align: center;
+  border: red 8px solid;
+  padding: 50px;
+  width: 50%;
+  margin-top: 50px;
+}
